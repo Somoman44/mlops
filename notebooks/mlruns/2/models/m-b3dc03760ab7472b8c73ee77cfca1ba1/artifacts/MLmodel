@@ -1,0 +1,33 @@
+artifact_path: file:c:/ml/mlops/notebooks/mlruns/2/models/m-b3dc03760ab7472b8c73ee77cfca1ba1/artifacts
+flavors:
+  python_function:
+    env:
+      conda: conda.yaml
+      virtualenv: python_env.yaml
+    loader_module: mlflow.sklearn
+    model_path: model.pkl
+    predict_fn: predict
+    python_version: 3.13.2
+  sklearn:
+    code: null
+    pickled_model: model.pkl
+    serialization_format: cloudpickle
+    sklearn_version: 1.9.0
+    skops_trusted_types: null
+is_signature_from_type_hint: false
+mlflow_version: 3.13.0
+model_id: m-b3dc03760ab7472b8c73ee77cfca1ba1
+model_size_bytes: 9629274
+model_uuid: m-b3dc03760ab7472b8c73ee77cfca1ba1
+prompts: null
+run_id: 22a1733e419143839b08344969e66516
+signature:
+  inputs: '[{"type": "long", "name": "brand", "required": true}, {"type": "long",
+    "name": "km_driven", "required": true}, {"type": "long", "name": "year", "required":
+    true}, {"type": "long", "name": "fuel", "required": true}, {"type": "long", "name":
+    "seller_type", "required": true}, {"type": "long", "name": "transmission", "required":
+    true}, {"type": "long", "name": "owner", "required": true}]'
+  outputs: '[{"type": "tensor", "tensor-spec": {"dtype": "float64", "shape": [-1]}}]'
+  params: null
+type_hint_from_example: false
+utc_time_created: '2026-06-15 08:33:51.250895'

@@ -1,0 +1,4 @@
+{
+  "XGBRegressor_score_X_test": "XGBRegressor.score(X=X_test, y=y_test)",
+  "r2_score_X_test": "r2_score(y_true=y_test, y_pred=y_pred)"
+}

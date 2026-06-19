@@ -1,0 +1,55 @@
+artifact_path: file:c:/ml/mlops/notebooks/mlruns/3/models/m-8dee67661dfa4af9ae83614f2e1073dd/artifacts
+flavors:
+  python_function:
+    env:
+      conda: conda.yaml
+      virtualenv: python_env.yaml
+    loader_module: mlflow.sklearn
+    model_path: model.pkl
+    predict_fn: predict
+    python_version: 3.13.2
+  sklearn:
+    code: null
+    pickled_model: model.pkl
+    serialization_format: cloudpickle
+    sklearn_version: 1.9.0
+    skops_trusted_types: null
+is_signature_from_type_hint: false
+mlflow_version: 3.13.0
+model_id: m-8dee67661dfa4af9ae83614f2e1073dd
+model_size_bytes: 1338771
+model_uuid: m-8dee67661dfa4af9ae83614f2e1073dd
+prompts: null
+run_id: a26b1d62aa82447dae6e28441e8b933d
+signature:
+  inputs: '[{"type": "long", "name": "km_driven", "required": true}, {"type": "double",
+    "name": "fuel", "required": true}, {"type": "double", "name": "seller_type", "required":
+    true}, {"type": "double", "name": "transmission", "required": true}, {"type":
+    "double", "name": "owner", "required": true}, {"type": "long", "name": "age",
+    "required": true}, {"type": "double", "name": "brand_Ambassador", "required":
+    true}, {"type": "double", "name": "brand_Audi", "required": true}, {"type": "double",
+    "name": "brand_BMW", "required": true}, {"type": "double", "name": "brand_Chevrolet",
+    "required": true}, {"type": "double", "name": "brand_Daewoo", "required": true},
+    {"type": "double", "name": "brand_Datsun", "required": true}, {"type": "double",
+    "name": "brand_Fiat", "required": true}, {"type": "double", "name": "brand_Force",
+    "required": true}, {"type": "double", "name": "brand_Ford", "required": true},
+    {"type": "double", "name": "brand_Honda", "required": true}, {"type": "double",
+    "name": "brand_Hyundai", "required": true}, {"type": "double", "name": "brand_Isuzu",
+    "required": true}, {"type": "double", "name": "brand_Jaguar", "required": true},
+    {"type": "double", "name": "brand_Jeep", "required": true}, {"type": "double",
+    "name": "brand_Kia", "required": true}, {"type": "double", "name": "brand_Land",
+    "required": true}, {"type": "double", "name": "brand_MG", "required": true}, {"type":
+    "double", "name": "brand_Mahindra", "required": true}, {"type": "double", "name":
+    "brand_Maruti", "required": true}, {"type": "double", "name": "brand_Mercedes-Benz",
+    "required": true}, {"type": "double", "name": "brand_Mitsubishi", "required":
+    true}, {"type": "double", "name": "brand_Nissan", "required": true}, {"type":
+    "double", "name": "brand_OpelCorsa", "required": true}, {"type": "double", "name":
+    "brand_Renault", "required": true}, {"type": "double", "name": "brand_Skoda",
+    "required": true}, {"type": "double", "name": "brand_Tata", "required": true},
+    {"type": "double", "name": "brand_Toyota", "required": true}, {"type": "double",
+    "name": "brand_Volkswagen", "required": true}, {"type": "double", "name": "brand_Volvo",
+    "required": true}]'
+  outputs: '[{"type": "tensor", "tensor-spec": {"dtype": "float64", "shape": [-1]}}]'
+  params: null
+type_hint_from_example: false
+utc_time_created: '2026-06-15 15:02:14.592657'

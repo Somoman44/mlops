@@ -1,0 +1,32 @@
+artifact_path: file:c:/ml/mlops/notebooks/mlruns/2/models/m-2d674d73eded4d928fd971996127a3f0/artifacts
+flavors:
+  python_function:
+    data: model.ubj
+    env:
+      conda: conda.yaml
+      virtualenv: python_env.yaml
+    loader_module: mlflow.xgboost
+    python_version: 3.13.2
+  xgboost:
+    code: null
+    data: model.ubj
+    model_class: xgboost.sklearn.XGBRegressor
+    model_format: ubj
+    xgb_version: 3.2.0
+is_signature_from_type_hint: false
+mlflow_version: 3.13.0
+model_id: m-2d674d73eded4d928fd971996127a3f0
+model_size_bytes: 371823
+model_uuid: m-2d674d73eded4d928fd971996127a3f0
+prompts: null
+run_id: f8703afac612420693515c823b65d90b
+signature:
+  inputs: '[{"type": "long", "name": "brand", "required": true}, {"type": "long",
+    "name": "km_driven", "required": true}, {"type": "long", "name": "year", "required":
+    true}, {"type": "long", "name": "fuel", "required": true}, {"type": "long", "name":
+    "seller_type", "required": true}, {"type": "long", "name": "transmission", "required":
+    true}, {"type": "long", "name": "owner", "required": true}]'
+  outputs: '[{"type": "tensor", "tensor-spec": {"dtype": "float32", "shape": [-1]}}]'
+  params: null
+type_hint_from_example: false
+utc_time_created: '2026-06-15 07:48:48.823444'
