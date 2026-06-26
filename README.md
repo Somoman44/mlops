@@ -78,3 +78,20 @@ The application exposes a `/predict` endpoint that accepts a POST request with c
   "price": 450000.0
 }
 ```
+
+---
+
+## 🚧 Limitations & Future Scope
+
+While this project successfully demonstrates a core MLOps deployment pipeline, there are several advanced concepts left for future iterations:
+
+### Current Limitations
+* **Static Model:** The model deployed is currently static. There is no automated feedback loop to evaluate how the model performs on new, unseen data in production over time.
+* **No Drift Detection:** The system currently lacks mechanisms to detect **Data Drift** (when the input data distribution changes) or **Concept Drift** (when the relationship between inputs and the target variable changes).
+* **Local/Static Tracking:** While MLflow was used for initial experimentation and model selection, a centralized, continuous MLflow tracking server is not currently monitoring the live production model.
+
+### Future Possibilities (Roadmap)
+* **Implement Data Drift Monitoring:** Integrate tools like **Evidently AI** or **Whylogs** to continuously monitor incoming API requests and alert the system if the live data deviates significantly from the training data.
+* **Continuous Training (CT) Pipeline:** Extend the GitHub Actions pipeline to include automated model retraining. If data drift is detected or a new batch of data is uploaded, the pipeline should automatically retrain, evaluate, and deploy the new model.
+* **Advanced Model Registry:** Utilize a hosted MLflow setup (or similar model registry) to manage model versions dynamically, allowing for easy rollbacks and staging-to-production transitions.
+* **A/B Testing or Shadow Deployment:** Before replacing the production model, route a small percentage of API traffic to a newly trained model to compare real-world performance without risking the main user experience.
