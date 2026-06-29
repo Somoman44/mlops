@@ -5,7 +5,7 @@ from typing import Literal
 from datetime import date
 from fastapi import FastAPI
 import os
-MODEL_PATH = os.getenv("MODEL_PATH", "../saved_pipeline/model.pkl")
+MODEL_PATH = os.getenv("MODEL_PATH", "saved_pipeline/model.pkl")
 
 model = joblib.load(MODEL_PATH)
 

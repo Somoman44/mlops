@@ -15,7 +15,7 @@ flavors:
     skops_trusted_types: null
 mlflow_version: 3.13.0
 model_id: null
-model_size_bytes: 7387218
-model_uuid: 8f3314a5787b42599087a8e792e512ab
+model_size_bytes: 7387352
+model_uuid: 9261a030abfc4d6dbcbf0c4dabd2ecc5
 prompts: null
-utc_time_created: '2026-06-17 05:23:39.175031'
+utc_time_created: '2026-06-29 17:38:33.330172'
