@@ -12,6 +12,7 @@ The project answers two primary questions:
 * **MLflow:** For tracking experiments and model selection.
 * **FastAPI:** For building a high-performance web API.
 * **Pydantic:** For strict data validation and typing of API requests.
+* **pytest**: For automated testing to ensure API reliability before deployment.
 * **Docker:** For containerizing the application to ensure consistency across environments.
 * **GitHub Actions:** For implementing continuous integration and continuous deployment (CI/CD).
 * **Render:** For cloud hosting and deploying the containerized API.
@@ -44,10 +45,24 @@ The Docker image was published to DockerHub. From there, a container was spun up
 
 ### 7. CI/CD Pipeline Automation
 To automate the deployment process, a CI/CD pipeline was established using **GitHub Actions**. Whenever new code is pushed to the `main` branch, the workflow automatically:
-1. Checks out the code.
-2. Logs into Docker Hub using encrypted repository secrets.
-3. Builds the updated Docker image using Docker Buildx.
-4. Pushes the new `latest` tag to the Docker Hub registry.
+
+Stage 1: Test
+
+  1. Checks out the code and sets up a      Python 3.13 environment.
+
+  2. Installs testing dependencies from `requirements-test.txt`.
+
+  3. Runs pytest to validate the application logic and ensure the API behaves as expected.
+
+Stage 2: Build & Deploy (Requires Test Stage to Pass)
+
+  1. Logs into Docker Hub using encrypted repository secrets.
+
+  2. Builds the updated Docker image using Docker Buildx and QEMU.
+
+  3. Pushes the new latest tag to the Docker Hub registry.
+
+  4. Automatically pings the Render deploy webhook (RENDER_DEPLOY_HOOK) to pull the latest image and update the live production API.
 
 ![CI/CD Pipeline Flowchart](./images/actions.png)
 

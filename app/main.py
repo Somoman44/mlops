@@ -18,7 +18,7 @@ class data(BaseModel):
     fuel: Literal['Petrol','Diesel','CNG','LPG','Electric']
     seller_type: Literal['Individual','Dealer','Trustmark Dealer']
     transmission: Literal['Manual','Automatic']
-    owner: Literal['Test Drive Car','First OWner','Second Owner','Third Owner','Fourth & Above Owner']
+    owner: Literal['Test Drive Car','First Owner','Second Owner','Third Owner','Fourth & Above Owner']
 
 @app.get("/")
 def api_check():
