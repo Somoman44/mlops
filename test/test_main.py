@@ -22,7 +22,7 @@ def test_predict_price_success(mock_model):
         "fuel": "Diesel",
         "seller_type": "Individual",
         "transmission": "Manual",
-        "owner": "First OWner" 
+        "owner": "First Owner" 
     }
     response = client.post("/predict",json=valid_payload)
     
